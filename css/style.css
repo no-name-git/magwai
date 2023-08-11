@@ -98,15 +98,15 @@ html {
 
 @font-face {
   font-family: Montserrat-bold;
-  src: url(/fonts/Montserrat-Bold.ttf);
+  src: url(../fonts/Montserrat-Bold.ttf);
 }
 @font-face {
   font-family: Montserrat-Regular;
-  src: url(/fonts/Montserrat-Regular.ttf);
+  src: url(../fonts/Montserrat-Regular.ttf);
 }
 @font-face {
   font-family: Mulish-Bold;
-  src: url(/fonts/Mulish-Bold.ttf);
+  src: url(../fonts/Mulish-Bold.ttf);
 }
 body {
   background: #131313;
@@ -309,7 +309,7 @@ body {
 }
 
 .welcome__background {
-  background-image: url(/images/Rectangle.png);
+  background-image: url(../images/Rectangle.png);
   background-size: cover;
   overflow: hidden;
   border-top-right-radius: 52px;
