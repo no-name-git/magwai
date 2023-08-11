@@ -51,20 +51,125 @@ html{
         font-size: calc(100vw / 300 * 6.8);
     }
 }
+@font-face {
+    font-family: Montserrat-bold;
+    src: url(/fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: Mulish-Bold;
+    src: url(/fonts/Mulish-Bold.ttf);
+}
 $color-btn: #C2AB81;
+$color-text-white: #fff;
+$background-white: #fff;
+$background-body: #131313;
+$color-text-gray: #131313;
+body{
+    background: $background-body;
+    position: relative;
+}
 ._margin-rigth20{
     margin-right: 2rem;
+}
+._margin-top13{
+    margin-top: 13rem;
+}
+._padding-bottom53{
+    padding-bottom: 5.3rem;
+}
+._paddind-top60{
+    padding-top: 6rem;
+}
+._justify-content-center{
+    justify-content: center;
+}
+
+.bold{
+    font-family: Montserrat-bold;
+    font-weight: 700;
 }
 .container{
     max-width: 172rem;
     width: 100%;
     margin: 0 auto;
-    padding: 0 .5rem;
+    padding: 0 1rem;
+}
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 2;
+    width: 50rem;
+    height: 50rem;
+    background: #fff;
+    border-radius: 5%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    &__title{
+        font-family: Montserrat-Regular;
+        font-weight: 400;
+        font-size: 3rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    &__wrapper{
+        display: flex;
+        padding: 2rem;
+        height: 50rem;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__form{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    &__input{
+        border: 0.4rem solid $color-btn;
+        width: 100%;
+        height: 5rem;
+        font-family: Montserrat-Regular;
+        font-weight: 400;
+        font-size: 1.8rem;
+    }
+    &.active{
+        display: block;
+    }
+}
+.darkening{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $background-body;
+    opacity: .6;
+    display: none;
+    &.active{
+        display: block;
+    }
+}
+.close{
+    text-align: end;
+    right: 1rem;
+    top: 1rem;
+    &:after{
+        display: inline-block;
+        font-size: 3rem;
+        content: "\00d7"; /* This will render the 'X' */
+        color: $color-text-gray;
+        cursor: pointer;
+      }
 }
 .header{
-    background: #131313;
     height: 11.5rem;
     display: flex;
+    position: relative;
     &__hamburger{
         display: none;
     }
@@ -83,8 +188,8 @@ $color-btn: #C2AB81;
         &__link{
             padding: 1rem 2.1rem;
             text-transform: uppercase;
-            color: #FFF;
-            font-family: Montserrat;
+            color: $color-text-white;
+            font-family: Montserrat-bold;
             font-size: 1.4rem;
             font-weight: 700;
             line-height: 2.1rem;
@@ -95,17 +200,36 @@ $color-btn: #C2AB81;
                 width: 2rem;
             }
         }
-        ul{
+    }
+    &__ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+.logo{
+    width: 18.6rem;
+}
+.phone{
+    width: 2rem;
+} 
+.btn{
+    &__wrap{
+        display: flex;
+        div{
             display: flex;
-            justify-content: space-between;
-            align-items: center;
+            gap: .4rem;
         }
     }
-    &__wrap-btn{
-        display: flex;
-        gap: .4rem;
+    &__phone{
+        padding: 1rem;
+        border: 1px solid #666;
+        transform: skew(342deg);
+        &:hover{
+            background: $background-white;
+        }
     }
-    &__btn{
+    &__call-me{
         background: $color-btn;
         display: inline-block;
         vertical-align: top;
@@ -116,13 +240,12 @@ $color-btn: #C2AB81;
         text-align: center;
         position: relative;
         transform: skew(342deg);
-        a{
-            color: #FFF;
-            font-family: Montserrat;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-        }
+        color: $color-text-white;
+        font-family: Montserrat-bold;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        cursor: pointer;
         &:hover {
             opacity:0.9;
         }
@@ -131,24 +254,239 @@ $color-btn: #C2AB81;
     &__span{
         height: 4.5rem;
         width: 0.5rem;
-        background: #FFF;
+        background: $background-white;
         display: block;
         transform: skew(342deg);
     }
-    &__actions{
-        padding: 1rem;
-        border: 1px solid #666;
-        transform: skew(342deg);
-        &:hover{
-            background: #fff;
+}
+.welcome{
+    &__background{
+        background-image: url(/images/Rectangle.png);
+        background-size: cover;
+        overflow: hidden;
+        border-top-right-radius: 52px;
+        border-top-left-radius: 52px;
+        display: flex;
+        align-items: flex-end;
+        color: $color-text-white;
+        padding: 65rem 0 13rem;
+        box-shadow: 
+            inset 0px 0px 0 $background-body,
+            inset -4px -34px 51px 0px $background-body;
+    }
+    &__wrap{
+        width: 54rem;
+        & p{
+            padding: 4rem 0;
+            color: $color-text-white;
+            font-family: Montserrat-Regular;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+    }
+}
+.title{
+    text-transform: uppercase;
+    color: $color-text-white;
+    font-family: Montserrat-bold;
+    font-size: 4.2rem;
+    font-weight: 700;
+}
+.post{
+    &__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 3rem 2rem;
+    }
+    &__item{
+        padding: 2.5rem;
+        height: 41.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__card{
+        width: 32rem;
+        height: 60rem;
+        background: $background-white;
+    }
+    &__img{
+        max-width: 100%;
+        width: 32rem;
+    }
+    &__title{
+        color: #171717;
+        font-family: Montserrat-Regular;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.6rem;
+    }
+    &__p{
+        color: #171717;
+        font-family: Mulish-Bold;
+        font-size: 1.4rem;
+        font-weight: 700;
+        line-height: 2.6rem;
+        letter-spacing: .15rem;
+        text-transform: uppercase;
+    }
+    &__text{
+        color: #666;
+        font-family: Montserrat-Regular;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+    }
+    &__data{
+        font-family: Montserrat-Regular;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    &__btn{
+        background: #171717;
+        padding: 1.6rem 0;
+        a{
+            color: $color-text-white;
+            font-family: Montserrat-Regular;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+    }
+}
+.download-more{
+    display: flex;
+    justify-content: center;
+}
+._width26{
+    width: 26rem;
+}
+@media (max-width: 1024px) {
+    .header{
+        &__hamburger{
+            display: block;
+        }
+        &__wrap{
+            justify-content: center;
+            flex-direction: row-reverse;
+            z-index: 1;
+        }
+        &__nav{
+            display: none;
+            &.active{
+                display: block;
+                background: $background-body;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 11.5rem;
+                width: 100%;
+                height: 30rem;
+            }
+            &__link{
+                text-shadow: 
+                    -1px 1px 2px #666666,
+                    1px 1px 2px #666666,
+                    1px -1px 0 #666666,
+                    -1px -1px 0 #666666;
+                color: $color-text-gray;
+                font-size: 3.6rem;
+                &:hover{
+                    border: none;
+                }
+            }
+        }
+        &__ul{
+            flex-direction: column;
+            align-items: normal;
+            gap: 1.5rem 0;
+        }
+    }
+    .post{
+        &__wrapper{
+            justify-content: space-evenly;
+        }
+    }
+    .welcome{
+        &__wrap{
+            width: 46rem;
         }
 
     }
-.logo{
-    width: 18.6rem;
+    .title{
+        font-size: 3.7rem;
+    }
 }
-.phone{
-    width: 2rem;
-} 
+@media (max-width: 500px){
+    .modal{
+        width: 42rem;
+        height: 42rem;
+        &__wrapper{
+            height: 42rem;
+        }
+        &__title{
+            font-size: 2.6rem;
+        }
+        &__input{
+            font-size: 1.6rem;
+        }
+    }
+    .header{
+        &__wrap{
+            justify-content: flex-start;
+        }
+        &__btn{
+            display: none;
+            &.active{
+                position: absolute;
+                left: 0;
+                top: 45rem;
+                display: flex;
+                justify-content: center;
+                width: 100%;
+                z-index: 1;
+            }
+        }
+        &__nav{
+            &.active{
+                height: 46rem;
+            }
+        }
+    }
+    .btn{
+        &__wrap{
+            flex-direction: column;
+            width: 90%;
+            gap: 1rem;
+        }
+        &__phone{
+            margin: 0;
+        }
+        &__call-me{
+            width: 100%;
+        }
+    }
+    .welcome{
+        &__background{
+            padding: 34rem 0 6rem;
+        }
+        &__wrap{
+            width: 34rem;
+            p{
+                font-size: 1.4rem;
+                padding: 2rem 0;
+            }
+        }
+    }
+    .title{
+        font-size: 2rem;
+    }
+    .post{
+        margin-top: 6rem;
+        &__btn{
+            a{
+                font-size: 1.4rem;
+            }
+        }
+    }
 }
-

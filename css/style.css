@@ -96,21 +96,130 @@ html {
   }
 }
 
+@font-face {
+  font-family: Montserrat-bold;
+  src: url(/fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(/fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Mulish-Bold;
+  src: url(/fonts/Mulish-Bold.ttf);
+}
+body {
+  background: #131313;
+  position: relative;
+}
+
 ._margin-rigth20 {
   margin-right: 2rem;
+}
+
+._margin-top13 {
+  margin-top: 13rem;
+}
+
+._padding-bottom53 {
+  padding-bottom: 5.3rem;
+}
+
+._paddind-top60 {
+  padding-top: 6rem;
+}
+
+._justify-content-center {
+  justify-content: center;
+}
+
+.bold {
+  font-family: Montserrat-bold;
+  font-weight: 700;
 }
 
 .container {
   max-width: 172rem;
   width: 100%;
   margin: 0 auto;
-  padding: 0 0.5rem;
+  padding: 0 1rem;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  width: 50rem;
+  height: 50rem;
+  background: #fff;
+  border-radius: 5%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.modal__title {
+  font-family: Montserrat-Regular;
+  font-weight: 400;
+  font-size: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+.modal__wrapper {
+  display: flex;
+  padding: 2rem;
+  height: 50rem;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.modal__input {
+  border: 0.4rem solid #C2AB81;
+  width: 100%;
+  height: 5rem;
+  font-family: Montserrat-Regular;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+.modal.active {
+  display: block;
+}
+
+.darkening {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #131313;
+  opacity: 0.6;
+  display: none;
+}
+.darkening.active {
+  display: block;
+}
+
+.close {
+  text-align: end;
+  right: 1rem;
+  top: 1rem;
+}
+.close:after {
+  display: inline-block;
+  font-size: 3rem;
+  content: "×"; /* This will render the 'X' */
+  color: #131313;
+  cursor: pointer;
 }
 
 .header {
-  background: #131313;
   height: 11.5rem;
   display: flex;
+  position: relative;
 }
 .header__hamburger {
   display: none;
@@ -129,8 +238,8 @@ html {
 .header__nav__link {
   padding: 1rem 2.1rem;
   text-transform: uppercase;
-  color: #FFF;
-  font-family: Montserrat;
+  color: #fff;
+  font-family: Montserrat-bold;
   font-size: 1.4rem;
   font-weight: 700;
   line-height: 2.1rem;
@@ -141,16 +250,36 @@ html {
   border-bottom: 0.5rem solid #C2AB81;
   width: 2rem;
 }
-.header__nav ul {
+.header__ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.header__wrap-btn {
+
+.logo {
+  width: 18.6rem;
+}
+
+.phone {
+  width: 2rem;
+}
+
+.btn__wrap {
+  display: flex;
+}
+.btn__wrap div {
   display: flex;
   gap: 0.4rem;
 }
-.header__btn {
+.btn__phone {
+  padding: 1rem;
+  border: 1px solid #666;
+  transform: skew(342deg);
+}
+.btn__phone:hover {
+  background: #fff;
+}
+.btn__call-me {
   background: #C2AB81;
   display: inline-block;
   vertical-align: top;
@@ -161,35 +290,230 @@ html {
   text-align: center;
   position: relative;
   transform: skew(342deg);
-}
-.header__btn a {
-  color: #FFF;
-  font-family: Montserrat;
+  color: #fff;
+  font-family: Montserrat-bold;
   font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
+  cursor: pointer;
 }
-.header__btn:hover {
+.btn__call-me:hover {
   opacity: 0.9;
 }
-.header__span {
+.btn__span {
   height: 4.5rem;
   width: 0.5rem;
-  background: #FFF;
+  background: #fff;
   display: block;
   transform: skew(342deg);
 }
-.header__actions {
-  padding: 1rem;
-  border: 1px solid #666;
-  transform: skew(342deg);
+
+.welcome__background {
+  background-image: url(/images/Rectangle.png);
+  background-size: cover;
+  overflow: hidden;
+  border-top-right-radius: 52px;
+  border-top-left-radius: 52px;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  padding: 65rem 0 13rem;
+  box-shadow: inset 0px 0px 0 #131313, inset -4px -34px 51px 0px #131313;
 }
-.header__actions:hover {
+.welcome__wrap {
+  width: 54rem;
+}
+.welcome__wrap p {
+  padding: 4rem 0;
+  color: #fff;
+  font-family: Montserrat-Regular;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.title {
+  text-transform: uppercase;
+  color: #fff;
+  font-family: Montserrat-bold;
+  font-size: 4.2rem;
+  font-weight: 700;
+}
+
+.post__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 3rem 2rem;
+}
+.post__item {
+  padding: 2.5rem;
+  height: 41.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.post__card {
+  width: 32rem;
+  height: 60rem;
   background: #fff;
 }
-.header .logo {
-  width: 18.6rem;
+.post__img {
+  max-width: 100%;
+  width: 32rem;
 }
-.header .phone {
-  width: 2rem;
+.post__title {
+  color: #171717;
+  font-family: Montserrat-Regular;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.6rem;
+}
+.post__p {
+  color: #171717;
+  font-family: Mulish-Bold;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.6rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+}
+.post__text {
+  color: #666;
+  font-family: Montserrat-Regular;
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+.post__data {
+  font-family: Montserrat-Regular;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.post__btn {
+  background: #171717;
+  padding: 1.6rem 0;
+}
+.post__btn a {
+  color: #fff;
+  font-family: Montserrat-Regular;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.download-more {
+  display: flex;
+  justify-content: center;
+}
+
+._width26 {
+  width: 26rem;
+}
+
+@media (max-width: 1024px) {
+  .header__hamburger {
+    display: block;
+  }
+  .header__wrap {
+    justify-content: center;
+    flex-direction: row-reverse;
+    z-index: 1;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__nav.active {
+    display: block;
+    background: #131313;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 11.5rem;
+    width: 100%;
+    height: 30rem;
+  }
+  .header__nav__link {
+    text-shadow: -1px 1px 2px #666666, 1px 1px 2px #666666, 1px -1px 0 #666666, -1px -1px 0 #666666;
+    color: #131313;
+    font-size: 3.6rem;
+  }
+  .header__nav__link:hover {
+    border: none;
+  }
+  .header__ul {
+    flex-direction: column;
+    align-items: normal;
+    gap: 1.5rem 0;
+  }
+  .post__wrapper {
+    justify-content: space-evenly;
+  }
+  .welcome__wrap {
+    width: 46rem;
+  }
+  .title {
+    font-size: 3.7rem;
+  }
+}
+@media (max-width: 500px) {
+  .modal {
+    width: 42rem;
+    height: 42rem;
+  }
+  .modal__wrapper {
+    height: 42rem;
+  }
+  .modal__title {
+    font-size: 2.6rem;
+  }
+  .modal__input {
+    font-size: 1.6rem;
+  }
+  .header__wrap {
+    justify-content: flex-start;
+  }
+  .header__btn {
+    display: none;
+  }
+  .header__btn.active {
+    position: absolute;
+    left: 0;
+    top: 45rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+  }
+  .header__nav.active {
+    height: 46rem;
+  }
+  .btn__wrap {
+    flex-direction: column;
+    width: 90%;
+    gap: 1rem;
+  }
+  .btn__phone {
+    margin: 0;
+  }
+  .btn__call-me {
+    width: 100%;
+  }
+  .welcome__background {
+    padding: 34rem 0 6rem;
+  }
+  .welcome__wrap {
+    width: 34rem;
+  }
+  .welcome__wrap p {
+    font-size: 1.4rem;
+    padding: 2rem 0;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .post {
+    margin-top: 6rem;
+  }
+  .post__btn a {
+    font-size: 1.4rem;
+  }
 }

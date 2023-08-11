@@ -5,21 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test-magwai</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="header__wrapper  container">
+            <div class="modal">
+                <div class="modal__wrapper">
+                    <div class="close"></div>
+                    <p class="modal__title">Введите персональные данные</p>
+                    <form action="" class="modal__form">
+                        <input type="text" class="modal__input" placeholder="Введите имя">
+                        <input type="phone" class="modal__input" placeholder="Введите номер телефона">
+                        <input type="email" class="modal__input" placeholder="Введите email">
+                    </form>
+                    <button class="post__btn"><a href="#">Continue reading</a></button>
+                </div>
+            </div>
             <div class="header__hamburger">
-                <img src="imges/hamburger.svg" alt="hamburger" class="hamburger">
+                <img src="images/hamburger.svg" alt="hamburger" class="hamburger">
             </div>
             <div class="header__wrap">
                 <div class="header__logo">
-                    <a href="/"><img src="imges/logo.svg" alt="logo" class="logo"></a>
+                    <a href="/"><img src="images/logo.svg" alt="logo" class="logo"></a>
                 </div>
                 <div class="header__nav">
-                    <ul>
+                    <ul class="header__ul">
                         <li class="header__nav__item"><a href="#" class="header__nav__link">УСЛУГИ</a></li>
                         <li class="header__nav__item"><a href="#" class="header__nav__link">АБОНЕМЕНТЫ</a></li>
                         <li class="header__nav__item"><a href="#" class="header__nav__link">ПОЧЕМУ МЫ</a></li>
@@ -30,15 +40,352 @@
                     </ul>
                 </div>
             </div>
-            <div class="header__wrap-btn">
-                <div class="header__actions _margin-rigth20">
-                    <a href="+79999999999"><img src="imges/phone.svg" alt="phone" class="phone"></a>
+            <div class="header__btn">
+                <div class="btn__wrap">
+                    <div class="btn__phone _margin-rigth20 _justify-content-center">
+                        <a href="+79999999999"><img src="images/phone.svg" alt="phone" class="phone"></a>
+                    </div>
+                    <div class="_justify-content-center">
+                        <button class="btn__call-me" id="btn__call-me">ОСТАВИТЬ ЗАЯВКУ</button>
+                        <span class="btn__span"></span>
+                    </div>
                 </div>
-                <button class="header__btn"><a href="">ОСТАВИТЬ ЗАЯВКУ</a></button>
-                <span class="header__span"></span>
             </div>
         </div>
     </header>
-    
+    <section class="welcome">
+        <div class="welcome__background">
+            <div class="container">
+                <div class="welcome__wrap">
+                    <h1 class="title">Полет Илона Маска и DOGIE COIN</h1>
+                    <p>В прошлый четверг все офигели от полета DOGIE COIN на марс.</p>
+                    <div class="btn__wrap">
+                        <div>
+                            <button class="btn__call-me _width26" id="btn__call-me">ОСТАВИТЬ ЗАЯВКУ</button>
+                            <span class="btn__span"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="darkening"></div>
+    <section class="post _margin-top13">
+        <div class="container">
+            <h1 class="title _padding-bottom53">Карточки</h1>
+            <div class="post__wrapper">
+                <div class="post__card">
+                    <img src="images/1.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/2.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">Water</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/3.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/4.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/5.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/6.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/7.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">Water</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/8.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/9.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/10.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/1.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/2.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">Water</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/3.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/4.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/5.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/6.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/7.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">Water</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/8.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/9.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/10.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/1.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/2.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">Water</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/3.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/4.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/5.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/6.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/7.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">Water</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/8.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/9.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+                <div class="post__card">
+                    <img src="images/10.png" alt="post-img" class="post__img">
+                    <div class="post__item">
+                        <p class="post__p">bridge</p>
+                        <h3 class="post__title">How to increase your <br> productivity with a Music</h3>
+                        <p class="post__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem santium doloremque laudantium, totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium dolo…</p>
+                        <p class="post__data">Posted by <span class="bold">Eugenia</span>, on July  24, 2019</p>
+                        <button class="post__btn"><a href="#">Continue reading</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="download-more _paddind-top60">
+                <div class="btn__wrap">
+                    <div>
+                        <button class="btn__call-me" id="button">ЗАГРУЗИТЬ ЕЩЕ</button>
+                        <span class="btn__span"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="main.js"></script>
 </body>
 </html>
